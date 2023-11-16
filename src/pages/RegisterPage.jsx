@@ -1,3 +1,4 @@
+import { Center } from '@chakra-ui/react';
 import { FilterField } from 'components/Filter/Filter.styled';
 import { FormContainer } from 'components/formContainer/formDiv.styled';
 import React from 'react';
@@ -50,7 +51,9 @@ const RegisterPage = () => {
           {errors.password && <span>This field is required</span>}
         </Label>
 
-        <Button type="submit">Sign up</Button>
+        <Center>
+          <Button type="submit">Sign in</Button>
+        </Center>
       </form>
     </FormContainer>
   );

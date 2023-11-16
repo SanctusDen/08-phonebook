@@ -10,6 +10,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import { authReducer } from './authReducer';
 import { ContactFormReducer } from './ContactFormReducer';
 
 const contactFormConfig = {
@@ -18,8 +19,15 @@ const contactFormConfig = {
   whitelist: ['items'],
 };
 
+const authConfig = {
+  key: 'auth',
+  storage,
+  whitelist: ['token'],
+};
+
 export const rootReducers = {
   contacts: persistReducer(contactFormConfig, ContactFormReducer),
+  auth: persistReducer(authConfig, authReducer),
 };
 
 export const store = configureStore({

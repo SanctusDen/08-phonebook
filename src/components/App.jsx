@@ -1,9 +1,10 @@
 import React, { lazy, Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Navigation from './Navigation/Navigation';
+import { Outlet, Route, Routes } from 'react-router-dom';
+// import Navigation from './Navigation/Navigation';
 
-const LoginPage = lazy(() => import('pages/LoginPage'));
+const Navigation = lazy(() => import('components/Navigation/Navigation'));
 const RegisterPage = lazy(() => import('pages/RegisterPage'));
+const LoginPage = lazy(() => import('pages/LoginPage'));
 const ContactsPage = lazy(() => import('pages/ContactsPage'));
 
 const appRoutes = [
@@ -21,6 +22,7 @@ export const App = () => {
           <Route key={path} path={path} element={element} />
         ))}
       </Routes>
+      <Outlet />
     </Suspense>
   );
 };

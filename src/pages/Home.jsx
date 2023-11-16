@@ -1,12 +1,12 @@
 import { Container, Section } from 'components/Navigation/Navigation.styled';
 import React from 'react';
-import { Box } from '@chakra-ui/react';
+import ContactForm from 'components/ContactForm/ContactForm';
 
 const Home = () => {
   return (
     <Section>
       <Container>
-        <Box></Box>
+        <ContactForm />
       </Container>
     </Section>
   );

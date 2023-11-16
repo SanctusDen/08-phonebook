@@ -5,13 +5,19 @@ const instance = axios.create({
   headers: { Authorization: 'Bearer' },
 });
 
+export const setToken = token => {
+  instance.defaults.headers.common.Authorization = `Bearer ${token}`;
+};
+
 export const requestRegister = async formData => {
   const { data } = await instance.post('/users/signup', formData);
+  setToken(data.token);
   return data;
 };
 
 export const requestLogin = async formData => {
   const { data } = await instance.post('/users/login', formData);
+  setToken(data.token);
   return data;
 };
 
