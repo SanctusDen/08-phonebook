@@ -26,4 +26,11 @@ export const Button = styled.button`
 
 export const Label = styled.label`
   padding: 20px;
+  display: flex;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  width: 300px;
+  flex-direction: column;
+  align-items: center;
 `;
