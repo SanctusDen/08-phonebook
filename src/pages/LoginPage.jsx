@@ -1,12 +1,12 @@
 import { Center } from '@chakra-ui/react';
-import { Label } from 'components/ContactForm/ContactForm-module';
+
 import { FilterField } from 'components/Filter/Filter.styled';
 import { FormContainer } from 'components/formContainer/formDiv.styled';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { loginThunk } from 'redux/authReducer';
-import { Button } from './pages.styled/Pages.styled';
+import { Button, Label } from './pages.styled/Pages.styled';
 
 const LoginPage = () => {
   const {
