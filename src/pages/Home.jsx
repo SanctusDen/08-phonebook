@@ -1,14 +1,11 @@
-import { Container, Section } from 'components/Navigation/Navigation.styled';
+import { Box, Center } from '@chakra-ui/react';
 import React from 'react';
-import ContactForm from 'components/ContactForm/ContactForm';
 
 const Home = () => {
   return (
-    <Section>
-      <Container>
-        <ContactForm />
-      </Container>
-    </Section>
+    <Center>
+      <Box></Box>
+    </Center>
   );
 };
 

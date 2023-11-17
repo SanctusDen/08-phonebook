@@ -1,6 +1,5 @@
 import React, { lazy, Suspense } from 'react';
 import { Outlet, Route, Routes } from 'react-router-dom';
-// import Navigation from './Navigation/Navigation';
 
 const Navigation = lazy(() => import('components/Navigation/Navigation'));
 const RegisterPage = lazy(() => import('pages/RegisterPage'));
