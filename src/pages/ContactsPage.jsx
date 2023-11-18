@@ -1,12 +1,11 @@
-import { FormContainer } from 'components/formContainer/formDiv.styled';
 import { Container, Section } from 'components/Navigation/Navigation.styled';
-import React from 'react';
+import React, { Suspense } from 'react';
 
 const ContactsPage = () => {
   return (
     <Section>
       <Container>
-        <FormContainer />
+        <Suspense></Suspense>
       </Container>
     </Section>
   );

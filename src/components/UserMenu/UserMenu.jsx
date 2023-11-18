@@ -1,10 +1,11 @@
+import { Button } from 'pages/pages.styled/Pages.styled';
 import React from 'react';
 
 const UserMenu = ({ email }) => {
   return (
     <div>
       <p>{email}</p>
-      <button type="submit">Logout</button>
+      <Button type="submit">Logout</Button>
     </div>
   );
 };

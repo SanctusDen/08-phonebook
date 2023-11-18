@@ -2,14 +2,15 @@ import React, { lazy, Suspense, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Outlet, Route, Routes } from 'react-router-dom';
 import { refreshrThunk } from 'redux/authReducer';
+import Navigation from './Navigation/Navigation';
 
-const Navigation = lazy(() => import('components/Navigation/Navigation'));
 const RegisterPage = lazy(() => import('pages/RegisterPage'));
 const LoginPage = lazy(() => import('pages/LoginPage'));
 const ContactsPage = lazy(() => import('pages/ContactsPage'));
+const Home = lazy(() => import('pages/Home'));
 
 const appRoutes = [
-  { path: '/', element: <Navigation /> },
+  { path: '/', element: <Home /> },
   { path: '/register', element: <RegisterPage /> },
   { path: '/login', element: <LoginPage /> },
   { path: '/contacts', element: <ContactsPage /> },
@@ -22,13 +23,16 @@ export const App = () => {
   }, [dispatch]);
 
   return (
-    <Suspense>
-      <Routes>
-        {appRoutes.map(({ path, element }) => (
-          <Route key={path} path={path} element={element} />
-        ))}
-      </Routes>
-      <Outlet />
-    </Suspense>
+    <>
+      <Navigation />
+      <Suspense>
+        <Routes>
+          {appRoutes.map(({ path, element }) => (
+            <Route key={path} path={path} element={element} />
+          ))}
+        </Routes>
+        <Outlet />
+      </Suspense>
+    </>
   );
 };

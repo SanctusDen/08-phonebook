@@ -8,6 +8,7 @@ import { selectIsLoading } from 'redux/selectors';
 
 const FormContainer = () => {
   const loading = useSelector(selectIsLoading);
+
   return (
     <FormContainer>
       {loading && <Loader />}

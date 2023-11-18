@@ -1,6 +1,5 @@
 import { Loader } from 'components/Loader/Loader';
 import UserMenu from 'components/UserMenu/UserMenu';
-import Home from 'pages/Home';
 
 import React, { Suspense } from 'react';
 import { useSelector } from 'react-redux';
@@ -34,7 +33,6 @@ const Navigation = () => {
 
       <main>
         <Suspense fallback={<Loader />}>
-          <Home />
           <Outlet />
         </Suspense>
       </main>
