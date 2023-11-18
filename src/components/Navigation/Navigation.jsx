@@ -1,4 +1,5 @@
 import { Loader } from 'components/Loader/Loader';
+import UserMenu from 'components/UserMenu/UserMenu';
 import Home from 'pages/Home';
 
 import React, { Suspense } from 'react';
@@ -20,6 +21,7 @@ const Navigation = () => {
           {authenticated ? (
             <>
               <NavLink to="/contacts">Contacts</NavLink>
+              <UserMenu />
             </>
           ) : (
             <>
