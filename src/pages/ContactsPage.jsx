@@ -1,12 +1,12 @@
-// import { Container, Section } from 'components/Navigation/Navigation.styled';
+import { Container, Section } from 'components/Navigation/Navigation.styled';
 import React from 'react';
 
 const ContactsPage = () => {
-  return <></>;
+  return (
+    <Section>
+      <Container></Container>
+    </Section>
+  );
 };
 
 export default ContactsPage;
-
-// <Section>
-//     <Container></Container>
-//   </Section>
