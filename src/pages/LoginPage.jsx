@@ -5,7 +5,8 @@ import { FormContainer } from 'components/formContainer/formDiv.styled';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
-import { loginThunk } from 'redux/authReducer';
+import { loginThunk } from 'redux/authreducer';
+
 import { Button, Label } from './pages.styled/Pages.styled';
 
 const LoginPage = () => {

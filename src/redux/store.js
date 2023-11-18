@@ -10,7 +10,8 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { authReducer } from './authReducer';
+import { authreducer } from './authreducer';
+
 import { ContactFormReducer } from './ContactFormReducer';
 
 const contactFormConfig = {
@@ -27,7 +28,7 @@ const authConfig = {
 
 export const rootReducers = {
   contacts: persistReducer(contactFormConfig, ContactFormReducer),
-  auth: persistReducer(authConfig, authReducer),
+  auth: persistReducer(authConfig, authreducer),
 };
 
 export const store = configureStore({

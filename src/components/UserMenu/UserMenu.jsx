@@ -1,7 +1,7 @@
 import { Button } from 'pages/pages.styled/Pages.styled';
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { logOutThunk } from 'redux/authReducer';
+import { logOutThunk } from 'redux/authreducer';
 
 const UserMenu = ({ email }) => {
   const dispatch = useDispatch();

@@ -4,8 +4,8 @@ import { FormContainer } from 'components/formContainer/formDiv.styled';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
+import { registerThunk } from 'redux/authreducer';
 
-import { registerThunk } from 'redux/authReducer';
 import { Button, Label } from './pages.styled/Pages.styled';
 
 const RegisterPage = () => {

@@ -1,7 +1,7 @@
 import React, { lazy, Suspense, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Outlet, Route, Routes } from 'react-router-dom';
-import { refreshrThunk } from 'redux/authReducer';
+import { refreshrThunk } from 'redux/authreducer';
 import Navigation from './Navigation/Navigation';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import RestictedRoute from './RestictedRoute/RestictedRoute';
