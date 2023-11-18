@@ -1,4 +1,10 @@
-import { Box, AbsoluteCenter, Text, ButtonGroup } from '@chakra-ui/react';
+import {
+  Box,
+  AbsoluteCenter,
+  Text,
+  ButtonGroup,
+  Center,
+} from '@chakra-ui/react';
 import React from 'react';
 import { Button } from './pages.styled/Pages.styled';
 
@@ -16,13 +22,14 @@ const Home = () => {
           streamlined communication and effortless accessibility.
         </Text>
       </Box>
-
-      <ButtonGroup gap={2}>
-        <>
-          <Button>Register</Button>
-          <Button>login</Button>
-        </>
-      </ButtonGroup>
+      <Center>
+        <ButtonGroup gap={2}>
+          <Box>
+            <Button to="/register">Register</Button>
+            <Button to="/login">Login</Button>
+          </Box>
+        </ButtonGroup>
+      </Center>
     </AbsoluteCenter>
   );
 };

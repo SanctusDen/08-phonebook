@@ -1,6 +1,7 @@
 import { styled } from 'styled-components';
 
 export const Button = styled.button`
+  cursor: pointer;
   display: flex;
   padding: 10px 20px;
   justify-content: center;
@@ -9,6 +10,7 @@ export const Button = styled.button`
   width: 120px;
   margin-top: 20px;
   font-size: 18px;
+  color: #005261;
 
   border-radius: 50px;
   border: 2px solid #3092b9;

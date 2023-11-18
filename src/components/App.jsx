@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import { Outlet, Route, Routes } from 'react-router-dom';
 import { refreshrThunk } from 'redux/authReducer';
 import Navigation from './Navigation/Navigation';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
+import RestictedRoute from './RestictedRoute/RestictedRoute';
 
 const RegisterPage = lazy(() => import('pages/RegisterPage'));
 const LoginPage = lazy(() => import('pages/LoginPage'));
@@ -11,9 +13,30 @@ const Home = lazy(() => import('pages/Home'));
 
 const appRoutes = [
   { path: '/', element: <Home /> },
-  { path: '/register', element: <RegisterPage /> },
-  { path: '/login', element: <LoginPage /> },
-  { path: '/contacts', element: <ContactsPage /> },
+  {
+    path: '/register',
+    element: (
+      <RestictedRoute>
+        <RegisterPage />
+      </RestictedRoute>
+    ),
+  },
+  {
+    path: '/login',
+    element: (
+      <RestictedRoute>
+        <LoginPage />
+      </RestictedRoute>
+    ),
+  },
+  {
+    path: '/contacts',
+    element: (
+      <PrivateRoute>
+        <ContactsPage />
+      </PrivateRoute>
+    ),
+  },
 ];
 
 export const App = () => {

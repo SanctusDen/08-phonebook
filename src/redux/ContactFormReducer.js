@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice, isAnyOf } from '@reduxjs/toolkit';
 import {
   fetchAddContacts,
   fetchAllContacts,
@@ -61,46 +61,44 @@ const contactsFormSlice = createSlice({
   },
   extraReducers: builder =>
     builder
-      .addCase(requestContacts.pending, state => {
-        state.isLoading = true;
-        state.error = null;
-      })
       .addCase(requestContacts.fulfilled, (state, action) => {
         state.isLoading = false;
         state.contacts.items = action.payload;
       })
-      .addCase(requestContacts.rejected, (state, action) => {
-        state.isLoading = false;
-        state.error = action.payload;
-      })
 
-      .addCase(addContacts.pending, state => {
-        state.isLoading = true;
-        state.error = null;
-      })
       .addCase(addContacts.fulfilled, (state, action) => {
         state.isLoading = false;
         state.contacts.items = [action.payload, ...state.contacts.items];
       })
-      .addCase(addContacts.rejected, (state, action) => {
-        state.isLoading = false;
-        state.error = action.payload;
-      })
 
-      .addCase(deleteContacts.pending, state => {
-        state.isLoading = true;
-        state.error = null;
-      })
       .addCase(deleteContacts.fulfilled, (state, action) => {
         state.isLoading = false;
         state.contacts.items = state.contacts.items.filter(
           c => c.id !== action.payload.id
         );
       })
-      .addCase(deleteContacts.rejected, (state, action) => {
-        state.isLoading = false;
-        state.error = action.payload;
-      }),
+      .addMatcher(
+        isAnyOf(
+          deleteContacts.pending,
+          requestContacts.pending,
+          addContacts.pending
+        ),
+        state => {
+          state.isLoading = true;
+          state.error = null;
+        }
+      )
+      .addMatcher(
+        isAnyOf(
+          deleteContacts.rejected,
+          requestContacts.rejected,
+          addContacts.rejected
+        ),
+        (state, action) => {
+          state.isLoading = false;
+          state.error = action.payload;
+        }
+      ),
 });
 
 export const { setFilter } = contactsFormSlice.actions;

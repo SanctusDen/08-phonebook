@@ -5,10 +5,12 @@ import React, { Suspense } from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink, Outlet } from 'react-router-dom';
 import { selectAuthAuthenticated } from 'redux/auth.selectors';
+
 import { Header } from './Navigation.styled';
 
 const Navigation = () => {
   const authenticated = useSelector(selectAuthAuthenticated);
+  // const dispatch = useDispatch();
 
   return (
     <>
