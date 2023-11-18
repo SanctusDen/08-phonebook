@@ -132,4 +132,4 @@ const authSlice = createSlice({
 
 export const { setFilter } = authSlice.actions;
 
-export const authReducer = authSlice.reducer;
+export const authreducer = authSlice.reducer;
