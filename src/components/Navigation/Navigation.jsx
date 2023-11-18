@@ -26,8 +26,12 @@ const Navigation = () => {
             </>
           ) : (
             <>
-              <NavLink to="/register">Register</NavLink>
-              <NavLink to="/login">Login</NavLink>
+              <NavLink to="/register" id="register">
+                Register
+              </NavLink>
+              <NavLink to="/login" id="login">
+                Login
+              </NavLink>
             </>
           )}
         </nav>

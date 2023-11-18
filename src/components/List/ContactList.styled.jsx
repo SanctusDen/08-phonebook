@@ -6,7 +6,8 @@ export const List = styled.ul`
   list-style: none;
 
   overflow: auto;
-  height: 880px;
+  max-height: 720px;
+  height: auto;
 
   li:nth-of-type(even) {
     background-color: #4e7b9e;

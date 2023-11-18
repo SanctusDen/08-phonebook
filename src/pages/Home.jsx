@@ -6,7 +6,7 @@ import {
   Center,
 } from '@chakra-ui/react';
 import React from 'react';
-import { Button } from './pages.styled/Pages.styled';
+import { LinkBox, LinkBtn } from './pages.styled/Pages.styled';
 
 const Home = () => {
   return (
@@ -24,10 +24,14 @@ const Home = () => {
       </Box>
       <Center>
         <ButtonGroup gap={2}>
-          <Box>
-            <Button to="/register">Register</Button>
-            <Button to="/login">Login</Button>
-          </Box>
+          <LinkBox>
+            <LinkBtn href="goit-react-hw-08-phonebook/register" to="/register">
+              Register
+            </LinkBtn>
+            <LinkBtn href="goit-react-hw-08-phonebook/login" to="/login">
+              Login
+            </LinkBtn>
+          </LinkBox>
         </ButtonGroup>
       </Center>
     </AbsoluteCenter>

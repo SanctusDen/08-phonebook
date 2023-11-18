@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-import { Form } from 'components/formContainer/formDiv.styled';
-import { Label, Field, SubmitBtn } from './ContactForm-module';
+import { Label, Field, SubmitBtn, Form } from './ContactForm-module';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContacts } from 'redux/ContactFormReducer';
 import { selectContacts } from 'redux/selectors';

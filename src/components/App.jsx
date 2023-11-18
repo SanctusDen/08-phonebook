@@ -42,7 +42,7 @@ const appRoutes = [
 export const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(refreshrThunk);
+    dispatch(refreshrThunk());
   }, [dispatch]);
 
   return (

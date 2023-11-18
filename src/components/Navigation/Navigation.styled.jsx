@@ -17,6 +17,8 @@ export const Header = styled.header`
   nav > a {
     color: #fff;
     text-decoration: none;
+    display: flex;
+    align-items: center;
 
     font-weight: 400;
     font-size: 16px;

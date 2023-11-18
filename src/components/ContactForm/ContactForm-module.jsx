@@ -40,3 +40,11 @@ export const SubmitBtn = styled.button`
     transition: all 0.3ms cubic-bez;
   }
 `;
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 8px;
+  padding: 4px;
+`;
