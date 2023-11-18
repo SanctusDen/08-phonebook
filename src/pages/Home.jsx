@@ -25,10 +25,16 @@ const Home = () => {
       <Center>
         <ButtonGroup gap={2}>
           <LinkBox>
-            <LinkBtn href="/register" to="/register">
+            <LinkBtn
+              href="https://sanctusden.github.io/goit-react-hw-08-phonebook/register"
+              to="/register"
+            >
               Register
             </LinkBtn>
-            <LinkBtn href="/login" to="/login">
+            <LinkBtn
+              href="https://sanctusden.github.io/goit-react-hw-08-phonebook/login"
+              to="/login"
+            >
               Login
             </LinkBtn>
           </LinkBox>
