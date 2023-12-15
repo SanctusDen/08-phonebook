@@ -10,7 +10,6 @@ import { Header } from './Navigation.styled';
 
 const Navigation = () => {
   const authenticated = useSelector(selectAuthAuthenticated);
-  // const dispatch = useDispatch();
 
   return (
     <>
